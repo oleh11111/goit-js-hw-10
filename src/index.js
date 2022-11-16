@@ -22,7 +22,7 @@ function onInput(event) {
   }
 
   fetchCountries(name).then(response => {
-    console.log(response);
+    
 
     if (response.length === 1) {
       clearDocument();
@@ -41,10 +41,9 @@ function onInput(event) {
         countryListUlEl.insertAdjacentHTML(
           'beforeend',
           createListMarckup(name, flag)
+          // додаю в дом дерево те що повертає createListMarckup
         );
-        console.log(country);
       });
-      // додаю в дом дерево те що повертає createListMarckup
       return;
     }
 
@@ -53,6 +52,9 @@ function onInput(event) {
         'Too many matches found. Please enter a more specific name.',
         { timeout: 3000 }
       );
+    }
+    if(!response.length){
+      clearDocument();
     } else {
       Notify.failure(`❌ Oops, there is no country with that name"`, {
         timeout: 3000,
@@ -66,7 +68,3 @@ function clearDocument() {
   countryInfoDivEl.innerHTML = '';
   countryListUlEl.innerHTML = '';
 }
-
-//   перебрати масив респонс , створити лішки, добавити їх в дом в юл
-//   якщо ресронс пустий вивести помилку
-// якщо довжина 1 виводити дів інфо

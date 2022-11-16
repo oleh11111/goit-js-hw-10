@@ -20,9 +20,42 @@ body {
   
 }
 .country-list{
+ list-style: none;  
+}
+
+.item-list{
+  display: flex;
+}
+
+.basic-info{
+  display: flex;
+  align-items: center;
+}
+
+.img-flag{
+  display: block;
+  width: 150px;
+  margin-right: 15px;
+}
+
+.country-name-list{
+  font-size: 19px;
+  color: green;
+}
  
-  list-style: none;
-  
+.country-name{
+  font-size: 24px;
+  color: blue;
+}
+
+.category{
+  font-size: 14px;
+  color: black;
+}
+
+.info-text{
+  font-size: 18px;
+  color:green;
 }
 
 
