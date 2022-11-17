@@ -25,6 +25,7 @@ body {
 
 .item-list{
   display: flex;
+  margin-bottom: 15px;
 }
 
 .basic-info{
